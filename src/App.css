@@ -1,0 +1,7 @@
+.blob1{
+  background-image: radial-gradient(farthest-side at 10% 50%, #faf6004b 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.blob2{
+  background-image: radial-gradient(farthest-side at 10% 50%, #fa70004b 0%, rgba(255, 255, 255, 0) 100%);
+}
