@@ -1,7 +1,23 @@
 .blob1{
+  @apply w-[40rem] h-[40rem] outline-none fixed -top-40 -right-20 blur-3xl -rotate-45;
   background-image: radial-gradient(farthest-side at 10% 50%, #faf6004b 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .blob2{
+  @apply w-[40rem] h-[40rem] outline-none fixed -bottom-60 -left-40 blur-3xl rotate-[135deg];
   background-image: radial-gradient(farthest-side at 10% 50%, #fa70004b 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.app{
+  @apply bg-black h-screen flex justify-center items-center;
+  padding: 3rem max(100px, calc(50vw - 600px));
+}
+
+.main-box{
+  @apply w-full h-full bg-[#121212] rounded-xl z-10;
+}
+
+.horizontal-bar{
+  @apply m-0;
+  margin-top: 0;
 }

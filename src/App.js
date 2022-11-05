@@ -1,11 +1,92 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import { Input, Button } from "@nextui-org/react";
+import { Product } from "./components";
 
 function App() {
   return (
-    <div className="bg-black h-screen flex justify-center items-center pt-20 px-20 pb-10">
-      {/* <div className="w-[40rem] h-[40rem] outline-none fixed -top-40 -right-20 blur-3xl blob1 -rotate-45"></div>
-      <div className="w-[40rem] h-[40rem] outline-none fixed -bottom-40 -left-20 blur-3xl blob2 rotate-[135deg]"></div> */}
-      <div className="w-full h-full bg-[#121212] rounded-xl"></div>
+    <div className="app">
+      <div className="blob1"></div>
+      <div className="blob2"></div>
+      <div className="main-box space-y-4">
+        <div className="flex justify-center pt-4 space-x-5">
+          <Input placeholder="Search" />
+          <Button auto className="!bg-secondary">Search</Button>
+        </div>
+        <hr className="horizontal-bar" />
+        <div className="space-y-4 h-[34.5rem] overflow-scroll overflow-x-hidden scrollbar-hide">
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+          <Product 
+            airport_id="Field-1"
+            iata_code="Field-2"
+            icao_code="Field-3"
+            airport_name="Field-4"
+            country_name="Field-5"
+          />
+        </div>
+      </div>
     </div>
   );
 }
