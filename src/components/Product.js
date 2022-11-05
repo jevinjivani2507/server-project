@@ -8,7 +8,7 @@ const Product = (props) => {
   const [deleteModel, setDeleteModel] = useState(false);
   return (
     <div className="px-10">
-      <Card CardVariants="shadow" className="!w-full !h-20 !border-0">
+      <Card className="!w-full !h-20 !border-0">
         <div className="flex justify-between p-10 w-full h-full">
           <div className="flex items-center space-x-5 ">
             <h3 className="m-0">{props.airport_id}</h3>
@@ -20,36 +20,48 @@ const Product = (props) => {
           <div className="flex items-center space-x-5">
             <Button
               auto
+              aria-label="Update"
               color="warning"
               className="!bg-secondary"
-              onClick={() => setUpdateModel(true)}
+              onPress={() => setUpdateModel(true)}
             >
               Update
             </Button>
             <Button
               auto
+              aria-label="delete"
               color="warning"
               className="!bg-secondary"
-              onClick={() => setDeleteModel(true)}
+              onPress={() => setDeleteModel(true)}
             >
               Delete
             </Button>
             <Modal
               closeButton
+              aria-label="Update"
               open={updateModel}
               onClose={() => setUpdateModel(false)}
             >
               <Modal.Body>
-                <UpdateModel />
+                <UpdateModel 
+                    airport_id={props.airport_id}
+                    iata_code={props.iata_code}
+                    icao_code={props.icao_code}
+                    airport_name={props.airport_name}
+                    country_name={props.country_name}
+                />
               </Modal.Body>
             </Modal>
             <Modal
               closeButton
+              aria-label="Delete"
               open={deleteModel}
               onClose={() => setDeleteModel(false)}
             >
               <Modal.Body>
-                <DeleteModel />
+                <DeleteModel 
+                  airport_id={props.airport_id}
+                />
               </Modal.Body>
             </Modal>
           </div>

@@ -3,6 +3,7 @@ import "./App.css";
 import { Input, Button } from "@nextui-org/react";
 import { Product } from "./components";
 
+
 function App() {
   return (
     <div className="app">
