@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Card, Button, Modal } from "@nextui-org/react";
 import UpdateModel from "./UpdateModel";
 import DeleteModel from "./DeleteModel";
 
+
 const Product = (props) => {
   const [updateModel, setUpdateModel] = useState(false);
   const [deleteModel, setDeleteModel] = useState(false);
+
+  
+
   return (
     <div className="px-10">
       <Card className="!w-full !h-20 !border-0">
         <div className="flex justify-between p-10 w-full h-full">
           <div className="flex items-center space-x-5 ">
-            <h3 className="m-0">{props.airport_id}</h3>
+            <h3 className="m-0 tracking-wide">{props.airport_name}</h3>
+            <h5 className="m-0">{props.airport_id}</h5>
             <h5 className="m-0">{props.iata_code}</h5>
             <h5 className="m-0">{props.icao_code}</h5>
-            <h5 className="m-0">{props.airport_name}</h5>
             <h5 className="m-0">{props.country_name}</h5>
           </div>
           <div className="flex items-center space-x-5">
@@ -43,12 +47,12 @@ const Product = (props) => {
               onClose={() => setUpdateModel(false)}
             >
               <Modal.Body>
-                <UpdateModel 
-                    airport_id={props.airport_id}
-                    iata_code={props.iata_code}
-                    icao_code={props.icao_code}
-                    airport_name={props.airport_name}
-                    country_name={props.country_name}
+                <UpdateModel
+                  airport_id={props.airport_id}
+                  iata_code={props.iata_code}
+                  icao_code={props.icao_code}
+                  airport_name={props.airport_name}
+                  country_name={props.country_name}
                 />
               </Modal.Body>
             </Modal>
@@ -59,9 +63,7 @@ const Product = (props) => {
               onClose={() => setDeleteModel(false)}
             >
               <Modal.Body>
-                <DeleteModel 
-                  airport_id={props.airport_id}
-                />
+                <DeleteModel airport_id={props.airport_id} />
               </Modal.Body>
             </Modal>
           </div>

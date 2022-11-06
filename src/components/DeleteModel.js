@@ -10,7 +10,7 @@ const DeleteModel = (props) => {
   }
 
   return (
-    <div>
+    <div className="pb-3">
       <h3 className="flex justify-center">Delete</h3>
       <hr />
       <div className="mt-2">
