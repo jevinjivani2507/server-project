@@ -6,7 +6,6 @@ const DeleteModel = (props) => {
   const deleteData = () => {
     console.log("Delete Data :: "+props.airport_id);
     console.log("Delete Data Api Call");
-
   }
 
   return (
